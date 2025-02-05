@@ -1,5 +1,6 @@
 package com.example.supermarket;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
     private EditText editSupermarketName, editSupermarketAddress;
     private Button buttonSave, buttonRate;
-    private static final int RATING_REQUEST_CODE = 1;
+    //private static final int RATING_REQUEST_CODE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,5 +30,13 @@ public class MainActivity extends AppCompatActivity {
         editSupermarketAddress = findViewById(R.id.editSupermarketAddress);
         buttonSave = findViewById(R.id.buttonSave);
         buttonRate = findViewById(R.id.buttonRate);
+
+        buttonSave.setOnClickListener(view -> saveSupermarketInfo());
+        buttonRate.setOnClickListener(view -> openRatingActivity());
     }
+    private void saveSupermarketInfo(){
+    }
+    private void openRatingActivity() {
+        Intent intent = new Intent(MainActivity.this, Rating.class);
+        startActivity(intent);}
 }
