@@ -11,43 +11,54 @@
         android:id="@+id/editSupermarketName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="30dp"
         android:hint="Enter Supermarket Name"
         android:inputType="text"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:margin="16dp"
         android:padding="16dp"
-        android:margin="16dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editSupermarketAddress"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
         android:hint="Enter Supermarket Address"
-        android:inputType="textPostalAddress"
-        app:layout_constraintTop_toBottomOf="@id/editSupermarketName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="text"
+        android:margin="16dp"
         android:padding="16dp"
-        android:margin="16dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editSupermarketName" />
 
     <Button
         android:id="@+id/buttonSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="20dp"
         android:text="Save"
-        app:layout_constraintTop_toBottomOf="@id/editSupermarketAddress"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:padding="8dp"
-        android:layout_margin="16dp"/>
+        app:layout_constraintTop_toBottomOf="@id/editSupermarketAddress" />
 
     <Button
         android:id="@+id/buttonRate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="16dp"
         android:text="Rate"
-        app:layout_constraintTop_toBottomOf="@id/buttonSave"
         app:layout_constraintStart_toStartOf="parent"
-        android:padding="8dp"
-        android:layout_margin="16dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonSave" />
 </androidx.constraintlayout.widget.ConstraintLayout>

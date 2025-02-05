@@ -1,10 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Rating">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rate the Supermarket"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="28sp"
+        android:layout_margin="16dp"/>
+    <TextView
+        android:id="@+id/textLiquor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rate our Liquor"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="18sp"
+        android:layout_margin="16dp"/>
+
+    <RatingBar
+        android:id="@+id/ratingLiquor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        app:layout_constraintTop_toBottomOf="@+id/textLiquor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:stepSize="1.0"/>
+    <TextView
+        android:id="@+id/textProduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rate our Produce"
+        app:layout_constraintTop_toBottomOf="@+id/ratingLiquor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="18sp"
+        android:layout_margin="16dp"/>
+
+    <RatingBar
+        android:id="@+id/ratingProduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        app:layout_constraintTop_toBottomOf="@+id/textProduce"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:stepSize="1.0"/>
+    <TextView
+        android:id="@+id/textMeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rate our Meat"
+        app:layout_constraintTop_toBottomOf="@+id/ratingProduce"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="18sp"
+        android:layout_margin="16dp"/>
+
+    <RatingBar
+        android:id="@+id/ratingMeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        app:layout_constraintTop_toBottomOf="@id/textMeat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:stepSize="1.0"/>
+    <TextView
+        android:id="@+id/textCheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rate our Cheese"
+        app:layout_constraintTop_toBottomOf="@+id/ratingMeat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="18sp"
+        android:layout_margin="16dp"/>
+
+    <RatingBar
+        android:id="@+id/ratingCheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        app:layout_constraintTop_toBottomOf="@id/textCheese"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:stepSize="1.0"/>
+    <TextView
+        android:id="@+id/textCheckout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rate our Checkout"
+        app:layout_constraintTop_toBottomOf="@+id/ratingCheese"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="18sp"
+        android:layout_margin="16dp"/>
+    <RatingBar
+        android:id="@+id/ratingCheckout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        app:layout_constraintTop_toBottomOf="@id/textCheckout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:stepSize="1.0"/>
+
+    <Button
+        android:id="@+id/buttonSaveRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        android:text="Save Rating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ratingCheckout" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
