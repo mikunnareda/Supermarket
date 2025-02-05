@@ -1,8 +1,9 @@
 package com.example.supermarket;
 
-import android.content.SharedPreferences;
+//import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
+//import android.preference.PreferenceManager;
 import android.widget.Button;
 import android.widget.RatingBar;
 
@@ -40,15 +41,15 @@ public class Rating extends AppCompatActivity {
     }
 
     private void saveRatings() {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor = prefs.edit();
-
-        editor.putFloat("LiquorRating", ratingLiquor.getRating());
-        editor.putFloat("ProduceRating", ratingProduce.getRating());
-        editor.putFloat("MeatRating", ratingMeat.getRating());
-        editor.putFloat("CheeseRating", ratingCheese.getRating());
-        editor.putFloat("CheckoutRating", ratingCheckout.getRating());
-
-        editor.apply();
+        SQLiteDatabase db = new DatabaseHelper(this).getWritableDatabase();
+        db.execSQL("INSERT INTO ratings (liquor, produce, meat, cheese, checkout) VALUES (?, ?, ?, ?, ?)",
+                new Object[]{
+                        ratingLiquor.getRating(),
+                        ratingProduce.getRating(),
+                        ratingMeat.getRating(),
+                        ratingCheese.getRating(),
+                        ratingCheckout.getRating()
+                });
+        db.close();
     }
 }
